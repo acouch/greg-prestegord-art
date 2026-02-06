@@ -1,0 +1,206 @@
+---
+---
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-slate-50 dark:bg-zinc-900 dark:text-white;
+    font-family: "Sen", sans-serif;
+  }
+
+  header {
+    @apply max-w-5xl mx-auto px-6 my-3 flex justify-between items-center text-lg;
+  }
+
+  footer {
+    @apply max-w-5xl mx-auto px-6 mt-16 mb-6 flex flex-col-reverse sm:flex-row justify-between items-center;
+  }
+  
+  main {
+    @apply mx-6 mt-32 max-w-4xl lg:mx-auto;
+  }
+
+  footer a, main a:not(.underline-none, .underline-animate, .link-button, :has(code)) {
+    @apply underline underline-offset-2 decoration-2 hover:decoration-slate-400 hover:dark:decoration-slate-500;
+  }
+
+  footer a:hover, main a:hover {
+    background-size: 0% 0rem;
+  }
+
+  nav a, .underline-animate {
+    @apply pb-1 bg-gradient-to-r from-slate-800 to-slate-800 dark:from-slate-300 dark:to-slate-300;
+    background-size: 0% 0.125rem;
+    background-repeat: no-repeat;
+    background-position: left calc(100% - 0.1rem);
+    transition: background-size 300ms ease;
+    text-decoration: none;
+  }
+
+  nav a:hover, .underline-animate:hover {
+      background-size: 100% 0.125rem;
+  }
+
+  nav a:not(:last-child) {
+    @apply mr-4;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply mb-2;
+  }
+
+  h1 {
+    @apply text-4xl;
+  }
+
+  h2 {
+      @apply text-3xl;
+  }
+
+  h3 {
+      @apply text-2xl;
+  }
+
+  h4 {
+      @apply text-xl;
+  }
+
+  h5 {
+      @apply text-lg;
+  }
+
+  h6 {
+      @apply text-base;
+  }
+
+  ul li {
+      @apply list-disc list-outside ml-8 md:ml-12;
+  }
+
+  ul li:not(:last-child) {
+      @apply mb-2;
+  }
+
+  hr {
+    @apply w-3/4 md:w-1/2 h-0.5 my-6 mx-auto rounded border-0 bg-zinc-300 dark:bg-zinc-600;
+  }
+
+  blockquote {
+    @apply pl-4 py-2 flex flex-col border-l-4 border-slate-300 dark:border-slate-300 text-justify hyphens-auto;
+  }
+
+  a code {
+    @apply underline;
+  }
+}
+
+#instantclick-bar {
+  @apply bg-black dark:bg-white;
+}
+
+#modal {
+  @apply hidden fixed top-0 left-0 justify-center items-center w-full h-full backdrop-blur-sm shadow-md z-20;
+}
+
+.frozen {
+  @apply w-full fixed top-0 left-0 bg-opacity-25 backdrop-blur-md;
+  z-index: 100;
+}
+
+.underline-none {
+  @apply inline-block;
+}
+
+.underline-none:hover {
+  background-size: 0% 0rem;
+}
+
+.round-button {
+  @apply w-10 h-10 p-2 rounded-full flex items-center justify-center hover:ring-2 focus:ring-2 ring-zinc-900 dark:ring-white transition-all;
+}
+
+.round-button > svg {
+  @apply w-6 h-6 text-gray-800 dark:text-white;
+}
+
+.desktop-nav {
+  @apply hidden sm:block;
+}
+
+.mobile-nav {
+  @apply flex-col rounded-xl p-2 bg-slate-100 dark:bg-zinc-800 border-2 border-zinc-900 dark:border-gray-300 sm:hidden absolute top-20 right-6;
+}
+
+.mobile-nav a {
+  @apply underline-none px-2 py-1 w-full hover:bg-slate-300 dark:hover:bg-zinc-600 rounded-lg;
+}
+
+.burgers {
+  @apply py-2 px-1 flex flex-col items-center sm:hidden cursor-pointer;
+}
+
+.bar1 {
+  @apply bg-zinc-900 dark:bg-white;
+  width: 25px;
+  height: 2px;
+  border-radius: 1px;
+  margin: 3px 0;
+  transition: 0.1s;
+}
+
+.bar2 {
+  @apply bg-zinc-900 dark:bg-white;
+  width: 25px;
+  height: 2px;
+  border-radius: 1px;
+  margin: 3px 0;
+  transition: 0.1s;
+}
+
+.closed .bar1 {
+  -webkit-transform: rotate(-45deg) translateY(6px);
+  transform: rotate(-45deg) translateY(6px);
+}
+
+.closed .bar2 {
+  -webkit-transform: rotate(45deg) translateY(-6px);
+  transform: rotate(45deg) translateY(-6px);
+}
+
+.insight {
+  @apply flex flex-row sm:items-center dark:text-slate-300 text-lg my-2;
+}
+
+.insight span {
+  @apply text-slate-500 dark:text-white;
+}
+
+.link-button {
+  @apply underline-none text-zinc-900 text-sm dark:text-white rounded-lg border-2 border-zinc-900 dark:border-gray-300 transition-all duration-100 hover:scale-110;
+}
+
+.tag, code {
+  @apply py-1 px-1.5 text-xs rounded-md bg-gray-200 dark:bg-gray-700;
+}
+
+.project, .video, .testimonial, .article, .achievement {
+  @apply mx-2 p-4 flex flex-col justify-center rounded-lg border-2 border-transparent hover:border-zinc-900 dark:hover:border-slate-300;
+}
+
+.content p:not(:last-child), .content h1, .content h2, .content h3, .content h4, .content h5, .content h6, .content ul, blockquote {
+  @apply mb-6;
+}
+
+.content blockquote {
+  @apply text-slate-500 dark:text-slate-300;
+}
+
+.subtext {
+  @apply text-slate-500 dark:text-slate-300;
+}

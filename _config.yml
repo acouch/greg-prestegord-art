@@ -1,0 +1,72 @@
+title: Gourav Khunger
+email: hi@gourav.sh
+description: >-
+  Gourav Khunger is a software developer and a self-taught programmer. He specialises in native Android app development and is passionate about Open Source. Checkout his projects on Github!
+baseurl: ""
+url: "https://gourav.sh"
+google_analytics: "G-GSRER1MM23"
+
+markdown: kramdown
+kramdown:
+  parse_block_html: true
+
+collections:
+  pages:
+    output: true
+    permalink: /:title
+  posts:
+    output: true
+    permalink: /post/:title
+  projects:
+    output: true
+    permalink: /project/:name
+
+defaults:
+  - scope:
+      path: "_posts/**/*.md"
+    values:
+      layout: post
+  - scope:
+      path: "_pages/projects/*.md"
+    values:
+      layout: project
+      permalink: /project/:name
+  - scope:
+      path: "_pages/achievements/*.md"
+    values:
+      layout: achievement
+      permalink: /achievement/:name
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-postcss
+  - jekyll-minifier
+  - jekyll-hostname
+  - jekyll-hashsert
+
+jekyll-minifier:
+  exclude:
+    - "sitemap.xml"
+    - "assets/css/theme.css"
+  uglifier_args:
+    harmony: true
+
+extlinks:
+  attributes: { rel: nofollow noopener noreferrer, target: _blank }
+  rel_include: [ "l.gourav.sh" ]
+  rel_exclude: [ "gourav.sh", "github.com", "genicsblog.com" ]
+
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+  - postcss.config.js
+  - tailwind.config.js
+  - package.json
+  - package-lock.json
+  - README.md
+  - LICENSE

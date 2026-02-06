@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ page.title }}</title>
+
+    {% if page.description %}
+    <meta name="description" content="{{ page.description }}" />
+    <meta name="og:description" content="{{ page.description }}" />
+    {% else %}
+    <meta name="description" content="{{ site.description }}" />
+    <meta name="og:description" content="{{ site.description }}" />
+    {% endif %}
+
+    <meta property="og:title" content="{{ page.title }}" />
+
+    {% if page.preview %}
+      {% assign image = page.preview %}
+    {% elsif page.youtube %}
+      {% assign image = "https://img.youtube.com/vi/" | append: page.youtube | append: "/maxresdefault.jpg" %}
+    {% elsif page.github %}
+      {% assign image = page.github | prepend: "https://opengraph.githubassets.com/$/" | hashsert %}
+    {% else %}
+      {% assign image = site.url | append: "/assets/images/social-cover.png" %}
+    {% endif %}
+    <meta property="og:image" content="{{ image }}" />
+
+    <meta
+      property="og:url"
+      content="{{ site.url }}{{ site.baseurl }}{{ page.url | replace: '/index.html', '' }}" />
+    <meta property="og:site_name" content="Gourav Khunger" />
+
+    {% if page.url == '/' %}
+    <meta property="og:type" content="profile" />
+    <meta property="profile:first_name" content="Gourav" />
+    <meta property="profile:last_name" content="Khunger" />
+    {% elsif page.youtube %}
+    <meta property="og:type" content="video">
+    <meta property="og:video" content="https://www.youtube.com/v/{{ page.youtube }}" />
+    {% else %}
+    <meta property="og:type" content="website" />
+    {% endif %}
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@gourav_khunger" />
+    <meta name="twitter:image" content="{{ image }}" />
+
+    <link
+      rel="canonical"
+      href="{{ site.url }}{{ site.baseurl }}{{ page.url | replace: '.html', '' }}"
+    />
+
+    <link
+      rel="icon"
+      href="{{ site.baseurl }}/assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sen&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/theme.css" />
+
+    <script
+      src="{{ site.baseurl }}/assets/js/theme.js"
+      data-no-instant
+    ></script>
+    {% if jekyll.environment == "production" %}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "{{ site.google_analytics }}");
+    </script>
+    {% endif %}
+  </head>
+  <body>
+    {% include header.html %}
+
+    <main>{{ content | extlinks }}</main>
+
+    {% include footer.html %}
+
+    {% if page.video_embed == true %}
+    <div id="modal">
+      <iframe
+        id="modal-iframe"
+        class="w-5/6 lg:w-3/5 max-w-4xl aspect-video rounded-2xl"
+        allowfullscreen loading="lazy">
+      </iframe>
+    </div>
+    {% endif %}
+
+    <script
+      src="{{ site.baseurl }}/assets/js/instantclick.min.js"
+      data-no-instant
+    ></script>
+    <script data-no-instant>
+      InstantClick.on("change", () => {
+        // set theme on page change
+        setTheme();
+
+        // set listener on theme toggle button
+        const toggleButton = document.getElementsByClassName("theme-toggle")[0];
+        toggleButton.addEventListener("click", () => {
+          saveTheme(isDark() ? LIGHT : DARK);
+        });
+
+        // handle nav
+        const burgers = document.getElementsByClassName("burgers")[0];
+        const nav = document.getElementsByClassName("mobile-nav")[0];
+        burgers.addEventListener("click", () => {
+          burgers.classList.toggle("closed");
+          nav.classList.toggle("hidden");
+          nav.classList.toggle("flex");
+        });
+      });
+
+      InstantClick.init("mousedown");
+    </script>
+  </body>
+</html>
