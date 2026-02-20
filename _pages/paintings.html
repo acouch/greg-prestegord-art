@@ -13,43 +13,31 @@ permalink: /paintings
     Oil on canvas and panel
   </p>
 
-  <!-- Gallery Grid - 3 columns with 3% gutter like worksbylauren -->
-  <div class="gallery-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[3%]">
+  <!-- Gallery Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
     {% for painting in site.paintings %}
-    <a href="{{ painting.url }}" class="gallery-item group block mb-8">
+    <a href="{{ painting.url }}" class="gallery-item group block">
       <!-- Image container -->
       <div class="aspect-[4/5] bg-slate-100 dark:bg-zinc-800 overflow-hidden">
-        {% if painting.image %}
         <img
           src="{{ painting.image }}"
           alt="{{ painting.title }}"
           class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           loading="lazy"
         />
-        {% else %}
-        <div class="w-full h-full flex items-center justify-center text-slate-300 dark:text-zinc-600">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-          </svg>
-        </div>
-        {% endif %}
       </div>
 
       <!-- Painting info -->
       <div class="mt-3 text-center">
         <h3 class="text-base font-normal text-zinc-800 dark:text-white group-hover:text-zinc-600 dark:group-hover:text-slate-300 transition-colors">
-          {{ painting.title }}{% if painting.year %}, {{ painting.year }}{% endif %}
+          {{ painting.title }}, {{ painting.year }}
         </h3>
-        {% if painting.dimensions or painting.medium %}
         <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">
-          {% if painting.dimensions %}{{ painting.dimensions }}{% endif %}{% if painting.dimensions and painting.medium %}, {% endif %}{% if painting.medium %}{{ painting.medium }}{% endif %}
+          {{ painting.dimensions }}, {{ painting.medium }}
         </p>
-        {% endif %}
-        {% if painting.status %}
         <p class="text-sm mt-1 {% if painting.status == 'sold' %}text-slate-400 italic{% else %}text-zinc-700 dark:text-slate-300{% endif %}">
           {{ painting.status }}
         </p>
-        {% endif %}
       </div>
     </a>
     {% endfor %}
