@@ -10,7 +10,7 @@ permalink: /
   <!-- Background image -->
   <div class="absolute inset-0 z-0">
     <img
-      src="/assets/images/paintings/hardtimes.jpg"
+      src="{{ site.baseurl }}/assets/images/paintings/hardtimes.jpg"
       alt="Hard Times by Gregory Prestegord"
       class="w-full h-full object-cover"
     />
@@ -45,11 +45,11 @@ permalink: /
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
     {% assign featured = site.paintings | slice: 0, 6 %}
     {% for painting in featured %}
-    <a href="{{ painting.url }}" class="group block overflow-hidden">
+    <a href="{{ site.baseurl }}/{{ painting.url }}" class="group block overflow-hidden">
       <div class="aspect-square bg-slate-200 dark:bg-zinc-800 overflow-hidden">
         {% if painting.image %}
         <img
-          src="{{ painting.image }}"
+          src="{{ site.baseurl }}/{{ painting.image }}"
           alt="{{ painting.title }}"
           class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
@@ -74,7 +74,7 @@ permalink: /
   </div>
 
   <div class="flex justify-center mt-12">
-    <a href="/paintings" class="px-8 py-3 text-lg border-2 border-zinc-900 dark:border-white hover:bg-zinc-900 hover:text-white dark:hover:bg-white dark:hover:text-zinc-900 transition-all duration-300 tracking-wide">
+    <a href="{{ site.baseurl }}/paintings" class="px-8 py-3 text-lg border-2 border-zinc-900 dark:border-white hover:bg-zinc-900 hover:text-white dark:hover:bg-white dark:hover:text-zinc-900 transition-all duration-300 tracking-wide">
       View All Paintings
     </a>
   </div>
@@ -86,7 +86,7 @@ permalink: /
     <p class="text-xl leading-relaxed text-slate-600 dark:text-slate-300">
       {{ site.description }}
     </p>
-    <a href="/about" class="inline-block mt-8 text-lg underline-animate">
+    <a href="{{ site.baseurl }}/about" class="inline-block mt-8 text-lg underline-animate">
       Learn more about the artist
     </a>
   </div>
