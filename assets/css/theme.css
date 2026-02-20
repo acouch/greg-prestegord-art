@@ -14,8 +14,23 @@
     font-family: "Sen", sans-serif;
   }
 
-  header {
-    @apply max-w-5xl mx-auto px-6 my-3 flex justify-between items-center text-lg;
+  /* Site header - transparent on homepage, solid on other pages */
+  .site-header {
+    @apply transition-colors duration-300;
+  }
+
+  body:not(.home) .site-header {
+    @apply bg-zinc-900;
+  }
+
+  body:not(.home) .site-header .site-title,
+  body:not(.home) .site-header .site-nav a {
+    @apply text-white/90;
+  }
+
+  body:not(.home) .site-header .site-nav a:hover,
+  body:not(.home) .site-header .site-title:hover {
+    @apply text-white;
   }
 
   footer {

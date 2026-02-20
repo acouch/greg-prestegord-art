@@ -1,10 +1,10 @@
-title: Gourav Khunger
+title: Gregory Prestegord Art
 email: hi@gourav.sh
 description: >-
-  Gourav Khunger is a software developer and a self-taught programmer. He specialises in native Android app development and is passionate about Open Source. Checkout his projects on Github!
+  Gregory Prestegord is an artist and a keeper of birds.
 baseurl: ""
-url: "https://gourav.sh"
-google_analytics: "G-GSRER1MM23"
+# url: "https://gourav.sh"
+# google_analytics: "G-GSRER1MM23"
 
 markdown: kramdown
 kramdown:
@@ -14,28 +14,16 @@ collections:
   pages:
     output: true
     permalink: /:title
-  posts:
+  paintings:
     output: true
-    permalink: /post/:title
-  projects:
-    output: true
-    permalink: /project/:name
+    permalink: /painting/:name
 
 defaults:
   - scope:
-      path: "_posts/**/*.md"
+      path: "_pages/paintings/*.md"
     values:
-      layout: post
-  - scope:
-      path: "_pages/projects/*.md"
-    values:
-      layout: project
-      permalink: /project/:name
-  - scope:
-      path: "_pages/achievements/*.md"
-    values:
-      layout: achievement
-      permalink: /achievement/:name
+      layout: painting
+      permalink: /painting/:name
 
 plugins:
   - jekyll-sitemap
@@ -48,8 +36,7 @@ jekyll-minifier:
   exclude:
     - "sitemap.xml"
     - "assets/css/theme.css"
-  uglifier_args:
-    harmony: true
+
 
 extlinks:
   attributes: { rel: nofollow noopener noreferrer, target: _blank }
