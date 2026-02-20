@@ -1,10 +1,10 @@
 title: Gregory Prestegord Art
-email: hi@gourav.sh
+# email: 
 description: >-
   Gregory Prestegord is an artist and a keeper of birds.
-baseurl: ""
-# url: "https://gourav.sh"
-# google_analytics: "G-GSRER1MM23"
+baseurl: "greg-prestegord-art"
+# url: ""
+# google_analytics: ""
 
 markdown: kramdown
 kramdown:
@@ -40,8 +40,8 @@ jekyll-minifier:
 
 extlinks:
   attributes: { rel: nofollow noopener noreferrer, target: _blank }
-  rel_include: [ "l.gourav.sh" ]
-  rel_exclude: [ "gourav.sh", "github.com", "genicsblog.com" ]
+#  rel_include: [ "l.gourav.sh" ]
+#  rel_exclude: [ "gourav.sh", "github.com", "genicsblog.com" ]
 
 exclude:
   - .sass-cache/

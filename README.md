@@ -1,20 +1,8 @@
-# [My portfolio website](https://gourav.sh)
+# Gregory Prestegord Art
 
-This is a minimal portfolio website built using Jekyll with HTML, TailwindCSS, JavaScript and Ruby (for a few custom plugins).
+This website is built using Jekyll with HTML, TailwindCSS, JavaScript and Ruby (for a few custom plugins). It is based off of this site: https://github.com/gouravkhunger/portfolio.
 
-The website is generated using [github actions](https://github.com/gouravkhunger/portfolio/blob/jekyll/.github/workflows/publish-site.yml) and served via the [gh-pages](https://github.com/gouravkhunger/portfolio/tree/gh-pages) branch.
-
-Here are the demo pictures of how the portfolio looks like:
-
-<p align="center">
-    <img src="https://user-images.githubusercontent.com/46792249/169602749-790ac576-415f-425e-abbc-4a3acc453b88.png" width="700"/>
-</p>
-<br/>
-<p align="center">
-    <img src="https://user-images.githubusercontent.com/46792249/169603232-ecc03153-48be-4a2c-b671-b1928323e135.png" width="700"/>
-</p>
-
-Drop this repository a :star: for the design :D
+The website is generated using [github actions](https://github.com/acouch/gregory-prestegord-art/blob/jekyll/.github/workflows/publish-site.yml) and served via the [gh-pages](https://github.com/acouch/gregory-prestegord-art/tree/gh-pages) branch.
 
 ## Local Setup
 
@@ -23,7 +11,7 @@ Please install [Ruby](https://www.ruby-lang.org/en/documentation/installation/) 
 Clone the project:
 
 ```bash
-git clone https://github.com/gouravkhunger/portfolio
+git clone https://github.com/acouch/gregory-prestegord-art
 cd portfolio
 ```
 
