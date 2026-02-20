@@ -10,7 +10,7 @@
       <div class="desktop-nav flex items-center space-x-8 text-sm tracking-[0.2em] uppercase">
         {% for item in site.data.nav %}
         {% unless item.title == "Home" %}
-        <a href="{{ item.url }}" class="text-white/75 hover:text-white transition-colors py-2" {% if item.target %} target="{{ item.target }}" {% endif %}>{{ item.title }}</a>
+        <a href="{{ site.baseurl }}/{{ item.url }}" class="text-white/75 hover:text-white transition-colors py-2" {% if item.target %} target="{{ item.target }}" {% endif %}>{{ item.title }}</a>
         {% endunless %}
         {% endfor %}
       </div>
@@ -25,7 +25,7 @@
       <div class="hidden mobile-nav flex-col items-center space-y-4 mt-4 text-sm tracking-[0.2em] uppercase">
         {% for item in site.data.nav %}
         {% unless item.title == "Home" %}
-        <a href="{{ item.url }}" class="text-white/75 hover:text-white transition-colors">{{ item.title }}</a>
+        <a href="{{ site.baseurl }}/{{ item.url }}" class="text-white/75 hover:text-white transition-colors">{{ item.title }}</a>
         {% endunless %}
         {% endfor %}
       </div>

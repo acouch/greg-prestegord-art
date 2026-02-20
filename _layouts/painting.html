@@ -5,7 +5,7 @@ layout: default
 <article class="painting-detail pt-24">
   <!-- Back link -->
   <div class="mb-8">
-    <a href="/paintings" class="text-slate-500 dark:text-slate-400 hover:text-zinc-900 dark:hover:text-white transition-colors text-sm tracking-wide uppercase">
+    <a href="{{ site.baseurl }}/paintings" class="text-slate-500 dark:text-slate-400 hover:text-zinc-900 dark:hover:text-white transition-colors text-sm tracking-wide uppercase">
       &larr; Back to Paintings
     </a>
   </div>
@@ -14,7 +14,7 @@ layout: default
   <div class="painting-image mb-8">
     {% if page.image %}
     <img
-      src="{{ page.image }}"
+      src="{{ site.baseurl }}/{{ page.image }}"
       alt="{{ page.title }}"
       class="w-full max-w-4xl mx-auto shadow-lg"
     />
@@ -87,7 +87,7 @@ layout: default
 
         {% if prev_index >= 0 %}
           {% assign prev_painting = paintings[prev_index] %}
-          <a href="{{ prev_painting.url }}" class="text-slate-500 dark:text-slate-400 hover:text-zinc-900 dark:hover:text-white transition-colors">
+          <a href="{{ site.baseurl }}/{{ prev_painting.url }}" class="text-slate-500 dark:text-slate-400 hover:text-zinc-900 dark:hover:text-white transition-colors">
             &larr; {{ prev_painting.title }}
           </a>
         {% else %}
@@ -96,7 +96,7 @@ layout: default
 
         {% if next_index < paintings_size %}
           {% assign next_painting = paintings[next_index] %}
-          <a href="{{ next_painting.url }}" class="text-slate-500 dark:text-slate-400 hover:text-zinc-900 dark:hover:text-white transition-colors">
+          <a href="{{ site.baseurl }}/{{ next_painting.url }}" class="text-slate-500 dark:text-slate-400 hover:text-zinc-900 dark:hover:text-white transition-colors">
             {{ next_painting.title }} &rarr;
           </a>
         {% else %}
