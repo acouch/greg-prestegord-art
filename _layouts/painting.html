@@ -45,12 +45,6 @@ layout: default
     </p>
     {% endif %}
 
-    {% if page.status %}
-    <p class="text-lg mb-6 {% if page.status == 'sold' or page.status == 'Sold' %}text-slate-400 italic{% else %}text-zinc-800 dark:text-white font-medium{% endif %}">
-      {{ page.status }}
-    </p>
-    {% endif %}
-
     {% if page.content != "" %}
     <div class="painting-description text-left mt-8 pt-8 border-t border-slate-200 dark:border-zinc-700">
       <div class="prose dark:prose-invert max-w-none">
