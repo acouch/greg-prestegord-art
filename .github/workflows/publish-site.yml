@@ -3,7 +3,7 @@ name: Publish site
 on:
   push:
     branches:
-      - jekyll
+      - main
   workflow_dispatch:
 
 jobs:
