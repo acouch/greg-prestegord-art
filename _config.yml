@@ -2,8 +2,8 @@ title: Gregory Prestegord Art
 # email: 
 description: >-
   Gregory Prestegord is an artist and a keeper of birds.#
-# baseurl: "/"
-# url: ""
+# baseurl: "https://www.prestegord.com"
+url: "https://www.prestegord.com"
 # google_analytics: ""
 
 markdown: kramdown
