@@ -1,1 +1,1 @@
-Sitemap: /greg-prestegord-art/sitemap.xml
+Sitemap: /sitemap.xml
