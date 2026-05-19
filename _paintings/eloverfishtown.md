@@ -1,5 +1,5 @@
 ---
-title: "Expressway"
+title: "el over fishtown"
 image: /assets/images/paintings/expressway.jpg
 year: 2022
 medium: "Oil on canvas"
