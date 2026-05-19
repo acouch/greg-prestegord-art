@@ -1,5 +1,5 @@
 ---
-title: "Burning Bush"
+title: "Italian market"
 image: /assets/images/paintings/burningbush.jpg
 year: 2023
 medium: "Oil on canvas"
