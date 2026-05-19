@@ -1,5 +1,5 @@
 ---
-title: "999 N Street"
+title: "The commons"
 image: /assets/images/paintings/commons.jpg
 year: 2022
 medium: "Oil on panel"
