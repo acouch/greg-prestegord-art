@@ -1,5 +1,5 @@
 ---
-title: "Chevron"
+title: "flat iron"
 image: /assets/images/paintings/chevron.jpg
 year: 2022
 medium: "Oil on canvas"
