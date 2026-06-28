@@ -1,8 +1,8 @@
 ---
-title: "Butterscotch"
+title: "City Hall in the Snow"
 image: /assets/images/paintings/butterscotch.jpg
 year: 2023
 medium: "Oil on canvas"
-dimensions: "24\" x 30\""
+dimensions: "24\" x 32\""
 status: "$2,800"
 ---
