@@ -1,8 +1,8 @@
 ---
 title: "The Messenger"
 image: /assets/images/paintings/themessenger.jpg
-year: 2023
+year: 2025
 medium: "Oil on canvas"
-dimensions: "36\" x 48\""
+dimensions: "30\" x 20\""
 status: "$4,500"
 ---
