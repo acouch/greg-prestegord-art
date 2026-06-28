@@ -1,8 +1,8 @@
 ---
 title: "Walk Alone"
 image: /assets/images/paintings/walkalone.jpg
-year: 2023
+year: 2019
 medium: "Oil on canvas"
-dimensions: "24\" x 30\""
+dimensions: "12\" x 12\""
 status: "$2,800"
 ---
