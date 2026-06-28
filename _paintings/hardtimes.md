@@ -1,8 +1,8 @@
 ---
 title: "Hard Times"
 image: /assets/images/paintings/hardtimes.jpg
-year: 2023
+year: 2008
 medium: "Oil on canvas"
-dimensions: "36\" x 48\""
+dimensions: "24\" x 43\""
 status: "$4,200"
 ---
