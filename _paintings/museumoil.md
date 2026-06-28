@@ -1,7 +1,7 @@
 ---
-title: "Museum Oil"
+title: "MFA"
 image: /assets/images/paintings/museumoil.jpg
-year: 2023
+year: 2024
 medium: "Oil on canvas"
 dimensions: "30\" x 40\""
 status: "$3,600"
