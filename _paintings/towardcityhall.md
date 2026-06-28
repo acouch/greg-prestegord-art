@@ -1,7 +1,7 @@
 ---
-title: "looking towards city hall"
+title: "Looking Towards City Hall"
 image: /assets/images/paintings/towardcityhall.jpg
-year: 2022
+year: 2025
 medium: "Oil on canvas"
 dimensions: "32\" x 22\""
 status: sold
