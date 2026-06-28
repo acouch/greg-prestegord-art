@@ -1,8 +1,8 @@
 ---
 title: "Construction"
 image: /assets/images/paintings/construction.jpg
-year: 2022
+year: 2008
 medium: "Oil on canvas"
-dimensions: "30\" x 40\""
+dimensions: "12\" x 12\""
 status: "$3,500"
 ---
