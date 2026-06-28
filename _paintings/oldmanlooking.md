@@ -1,5 +1,5 @@
 ---
-title: "Old man looking"
+title: "Repet"
 image: /assets/images/paintings/oldmanlooking.jpg
 year: 2026
 medium: "Oil on panel"
