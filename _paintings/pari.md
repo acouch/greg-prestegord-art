@@ -3,6 +3,6 @@ title: "Pari"
 image: /assets/images/paintings/pari.jpg
 year: 2022
 medium: "Oil on canvas"
-dimensions: "20\" x 24\""
+dimensions: "48\" x 48\""
 status: "$2,400"
 ---
