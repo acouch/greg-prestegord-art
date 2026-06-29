@@ -219,3 +219,10 @@
 .subtext {
   @apply text-slate-500 dark:text-slate-300;
 }
+
+@media (min-width: 1024px) {
+    .lg\:-mx-\[calc\(\(100vw-896px\)\/2\)\] {
+      margin-left: calc(calc((100vw - 912px) / 2) * -1) !important;
+      margin-right: calc(calc((100vw - 912px) / 2) * -1) !important;
+    }
+}
