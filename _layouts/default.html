@@ -21,10 +21,6 @@
 
     {% if page.preview %}
       {% assign image = page.preview %}
-    {% elsif page.youtube %}
-      {% assign image = "https://img.youtube.com/vi/" | append: page.youtube | append: "/maxresdefault.jpg" %}
-    {% elsif page.github %}
-      {% assign image = page.github | prepend: "https://opengraph.githubassets.com/$/" | hashsert %}
     {% else %}
       {% assign image = site.url | append: "/assets/images/social-cover.png" %}
     {% endif %}
@@ -39,9 +35,6 @@
     <meta property="og:type" content="profile" />
     <meta property="profile:first_name" content="Gregory" />
     <meta property="profile:last_name" content="Prestegord" />
-    {% elsif page.youtube %}
-    <meta property="og:type" content="video">
-    <meta property="og:video" content="https://www.youtube.com/v/{{ page.youtube }}" />
     {% else %}
     <meta property="og:type" content="website" />
     {% endif %}
