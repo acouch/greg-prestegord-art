@@ -14,7 +14,7 @@ permalink: /paintings
   <!-- Gallery Grid -->
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
     {% for painting in site.paintings %}
-    <a href="{{ site.url }}/{{ painting.url }}" class="gallery-item group block">
+    <a href="{{ site.url }}{{ painting.url }}" class="gallery-item group block">
       <!-- Image container -->
       <div class="aspect-[4/5] bg-slate-100 dark:bg-zinc-800 overflow-hidden">
         <img
