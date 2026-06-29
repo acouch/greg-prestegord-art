@@ -5,10 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ page.title }}</title>
-<link rel="apple-touch-icon" sizes="180x180" href="/asssets/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/asssets/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/asssets/favicon-16x16.png">
-<link rel="manifest" href="/asssets/site.webmanifest">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ site.url }}/asssets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ site.url }}/asssets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ site.url }}/asssets/favicon-16x16.png">
     {% if page.description %}
     <meta name="description" content="{{ page.description }}" />
     <meta name="og:description" content="{{ page.description }}" />
@@ -22,13 +21,13 @@
     {% if page.preview %}
       {% assign image = page.preview %}
     {% else %}
-      {% assign image = site.url | append: "/assets/images/social-cover.png" %}
+      {% assign image = site.url | append: "{{ site.url }}/assets/images/social-cover.png" %}
     {% endif %}
     <meta property="og:image" content="{{ image }}" />
 
     <meta
       property="og:url"
-      content="{{ site.url }}{{ site.baseurl }}{{ page.url | replace: '/index.html', '' }}" />
+      content="{{ site.url }}{{ page.url | replace: '/index.html', '' }}" />
     <meta property="og:site_name" content="Gregory Prestegord" />
 
     {% if page.url == '/' %}
@@ -44,12 +43,12 @@
 
     <link
       rel="canonical"
-      href="{{ site.url }}{{ site.baseurl }}{{ page.url | replace: '.html', '' }}"
+      href="{{ site.url }}{{ site.url }}{{ page.url | replace: '.html', '' }}"
     />
 
     <link
       rel="icon"
-      href="{{ site.baseurl }}/assets/favicon.ico"
+      href="{{ site.url }}/assets/favicon.ico"
       type="image/x-icon"
     />
 
@@ -59,28 +58,12 @@
       href="https://fonts.googleapis.com/css2?family=Sen&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/theme.css" />
+    <link rel="stylesheet" href="{{ site.url }}/assets/css/theme.css" />
 
     <script
-      src="{{ site.baseurl }}/assets/js/theme.js"
+      src="{{ site.url }}/assets/js/theme.js"
       data-no-instant
     ></script>
-    {% if jekyll.environment == "production" %}
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "{{ site.google_analytics }}");
-    </script>
-    {% endif %}
   </head>
   <body>
     {% include header.html %}
@@ -100,7 +83,7 @@
     {% endif %}
 
     <script
-      src="{{ site.baseurl }}/assets/js/instantclick.min.js"
+      src="{{ site.url }}/assets/js/instantclick.min.js"
       data-no-instant
     ></script>
     <script data-no-instant>

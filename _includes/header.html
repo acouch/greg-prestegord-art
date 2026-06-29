@@ -1,7 +1,7 @@
 <header class="site-header fixed top-0 left-0 right-0 z-50 py-8 px-6">
   <div class="flex flex-col items-center justify-center">
     <!-- Site Title / Logo -->
-    <a href="{{ site.baseurl }}/" class="site-title text-2xl sm:text-3xl tracking-[0.3em] uppercase font-light text-white/90 hover:text-white transition-colors mb-4">
+    <a href="{{ site.url }}/" class="site-title text-2xl sm:text-3xl tracking-[0.3em] uppercase font-light text-white/90 hover:text-white transition-colors mb-4">
       Gregory Prestegord
     </a>
 
@@ -10,7 +10,7 @@
       <div class="desktop-nav flex items-center space-x-8 text-sm tracking-[0.2em] uppercase">
         {% for item in site.data.nav %}
         {% unless item.title == "Home" %}
-        <a href="{{ site.baseurl }}/{{ item.url }}" class="text-white/75 hover:text-white transition-colors py-2" {% if item.target %} target="{{ item.target }}" {% endif %}>{{ item.title }}</a>
+        <a href="{{ site.url }}/{{ item.url }}" class="text-white/75 hover:text-white transition-colors py-2" {% if item.target %} target="{{ item.target }}" {% endif %}>{{ item.title }}</a>
         {% endunless %}
         {% endfor %}
       </div>
@@ -25,7 +25,7 @@
       <div class="hidden mobile-nav flex-col items-center space-y-4 mt-4 text-sm tracking-[0.2em] uppercase">
         {% for item in site.data.nav %}
         {% unless item.title == "Home" %}
-        <a href="{{ site.baseurl }}/{{ item.url }}" class="text-white/75 hover:text-white transition-colors">{{ item.title }}</a>
+        <a href="{{ site.url }}/{{ item.url }}" class="text-white/75 hover:text-white transition-colors">{{ item.title }}</a>
         {% endunless %}
         {% endfor %}
       </div>
